@@ -1,4 +1,4 @@
-package framework;
+package main;
 
 import algorithm.QuickSort;
 import descriptor.Array;

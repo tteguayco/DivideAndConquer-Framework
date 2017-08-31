@@ -13,6 +13,7 @@ Implementation of several "Divide and Conquer algorithms" using the framework pr
 * Mergesort
 * Maximum subarray problem
 * Strassen's algorithm for matrix multiplication
+* Large integer multiplication
 
 ## Usage
 
