@@ -25,7 +25,7 @@ public class QuickSort extends DivideConquerTemplate {
 		int pivot = a[first];
 		int sp = first;
 		
-		for (int i = first + 1; i <= last; i++)
+		for (int i = first; i < last; i++)
 		{ 
 			if (a[i] < pivot) { 
 				swap(a, ++sp, i); 
