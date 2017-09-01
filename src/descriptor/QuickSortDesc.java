@@ -3,15 +3,23 @@ package descriptor;
 import aux.Problem;
 import aux.Solution;
 
-public class Array implements Problem, Solution {
+public class QuickSortDesc implements Problem, Solution {
 	private int[] arr;
 	private int first;
 	private int last;
 	
-	public Array(int[] anArr, int aFirst, int aLast) {
+	public QuickSortDesc(int[] anArr, int aFirst, int aLast) {
 		arr = anArr;
 		first = aFirst;
 		last = aLast;
+	}
+
+	public int size() {
+		return last - first + 1;
+	}
+
+	public int get(int index) {
+		return arr[index];
 	}
 
 	public String toString() {

@@ -2,14 +2,14 @@ package algorithm;
 
 import aux.Problem;
 import aux.Solution;
+import descriptor.QuickSortDesc;
 import template.DivideConquerTemplate;
-import descriptor.Array;
 
 public class QuickSort extends DivideConquerTemplate {
 
 	@Override
 	protected boolean isSimple(Problem p) {
-		return (((Array)p).getFirst() >= ((Array)p).getLast());
+		return (((QuickSortDesc)p).getFirst() >= ((QuickSortDesc)p).getLast());
 	}
 
 	@Override
@@ -19,9 +19,9 @@ public class QuickSort extends DivideConquerTemplate {
 
 	@Override
 	protected Problem[] decompose(Problem p) {
-		int first = ((Array)p).getFirst();
-		int last = ((Array)p).getLast();
-		int[] a = ((Array)p).getArr ();
+		int first = ((QuickSortDesc)p).getFirst();
+		int last = ((QuickSortDesc)p).getLast();
+		int[] a = ((QuickSortDesc)p).getArr ();
 		int pivot = a[first];
 		int sp = first;
 		
@@ -33,9 +33,9 @@ public class QuickSort extends DivideConquerTemplate {
 		}
 		
 		swap(a, first, sp);
-		Problem[] ps = new Array[2];
-		ps[0] = new Array(a,first,sp-1);
-		ps[1] = new Array(a,sp+1,last);
+		Problem[] ps = new QuickSortDesc[2];
+        ps[0] = new QuickSortDesc(a,first,sp-1);
+		ps[1] = new QuickSortDesc(a,sp+1,last);
 		return ps;
 	}
 

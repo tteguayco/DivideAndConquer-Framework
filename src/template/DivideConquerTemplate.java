@@ -21,9 +21,9 @@ abstract public class DivideConquerTemplate {
 		
 		Solution[] ss = new Solution[pp.length];
 		for(int i = 0; i < pp.length; i++) { 
-			ss[i] = solve(pp[i]); 
+			ss[i] = solve(pp[i]);
 		}
 		
-		return combine(p,ss);
+		return combine(p, ss);
 	}
 }
