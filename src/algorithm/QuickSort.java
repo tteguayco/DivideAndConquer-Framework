@@ -34,8 +34,8 @@ public class QuickSort extends DivideConquerTemplate {
 		
 		swap(a, first, sp);
 		Problem[] ps = new QuickSortDesc[2];
-        ps[0] = new QuickSortDesc(a,first,sp-1);
-		ps[1] = new QuickSortDesc(a,sp+1,last);
+        ps[0] = new QuickSortDesc(a,first,sp - 1);
+		ps[1] = new QuickSortDesc(a,sp + 1, last);
 		return ps;
 	}
 
