@@ -3,9 +3,9 @@ package main;
 import algorithm.BinarySearch;
 import algorithm.QuickSort;
 import algorithm.MergeSort;
-import descriptor.BinarySearchDesc;
-import descriptor.MergeSortDesc;
-import descriptor.QuickSortDesc;
+import algorithm.Strassen;
+import descriptor.*;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
@@ -48,6 +48,22 @@ public class Main {
 		BinarySearchDesc binarySearchSolution =
 				(BinarySearchDesc) binarySearchSolver.solve(binarySearchProblem);
 
-		System.out.println("Index of the target value: " + binarySearchSolution.getIndexOfValue());
+		System.out.println("Index of the target value: " + binarySearchSolution.getIndexOfValue() + "\n");
+
+		// Strassen's matrix multiplication
+		Matrix A = new Matrix(2, 2, false);
+		Matrix B = new Matrix(2, 2, false);
+		Matrix C = new Matrix(2, 2, true);
+
+		System.out.println("Applying Strassen algorithm...\n");
+		System.out.println("A = \n" + A);
+		System.out.println("B = \n" + B);
+
+		StrassenDesc strassenProblem = new StrassenDesc(A, B);
+		Strassen strassenSolver = new Strassen();
+		C = ((StrassenDesc) strassenSolver.solve(strassenProblem)).getC();
+
+		System.out.println("C = \n" + C);
+
 	}
 }
