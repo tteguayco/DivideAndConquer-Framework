@@ -1,9 +1,6 @@
 package main;
 
-import algorithm.BinarySearch;
-import algorithm.QuickSort;
-import algorithm.MergeSort;
-import algorithm.Strassen;
+import algorithm.*;
 import descriptor.*;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -65,5 +62,12 @@ public class Main {
 
 		System.out.println("C = \n" + C);
 
+		// Maximum subarray problem
+		int[] valuesToSum = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+		MaximumSubarraySumDesc maxSubarrayProblem = new MaximumSubarraySumDesc(valuesToSum,
+				0, valuesToSum.length - 1);
+		MaximumSubarraySum maximumSubarraySumSolver = new MaximumSubarraySum();
+		System.out.println("Maximum subarray sum problem\nSolution: " +
+				maximumSubarraySumSolver.solve(maxSubarrayProblem));
 	}
 }

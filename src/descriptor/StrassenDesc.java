@@ -15,6 +15,7 @@ public class StrassenDesc implements Problem, Solution {
 
         this.setA(A);
         this.setB(B);
+
         C = new Matrix(A.getNumRows(), B.getNumCols(), true);
     }
 
