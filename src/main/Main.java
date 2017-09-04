@@ -48,8 +48,8 @@ public class Main {
 		System.out.println("Index of the target value: " + binarySearchSolution.getIndexOfValue() + "\n");
 
 		// Strassen's matrix multiplication
-		Matrix A = new Matrix(2, 2, false);
-		Matrix B = new Matrix(2, 2, false);
+		Matrix A = new Matrix(4, 4, false);
+		Matrix B = new Matrix(4, 4, false);
 		Matrix C = new Matrix(2, 2, true);
 
 		System.out.println("Applying Strassen algorithm...\n");
@@ -69,5 +69,13 @@ public class Main {
 		MaximumSubarraySum maximumSubarraySumSolver = new MaximumSubarraySum();
 		System.out.println("Maximum subarray sum problem\nSolution: " +
 				maximumSubarraySumSolver.solve(maxSubarrayProblem));
+
+		// Maximum value of an array
+		FindMaximumDesc findMaximumProblem = new FindMaximumDesc(valuesToSum,
+				0, valuesToSum.length - 1);
+		FindMaximum findMaximumSolver = new FindMaximum();
+		System.out.println("\nMaximum of the array: " + findMaximumProblem);
+		System.out.println("Solution: "
+				+ ((FindMaximumDesc) findMaximumSolver.solve(findMaximumProblem)).getMax());
 	}
 }
