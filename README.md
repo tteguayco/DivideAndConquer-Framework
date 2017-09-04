@@ -6,7 +6,7 @@ Implementation of several "Divide and Conquer algorithms" using the framework pr
 
 ## Algorithms
 
-* Maximum of an unsorted array
+* Maximum of an array
 * Median of an unsorted array
 * Binary Search
 * Quicksort
